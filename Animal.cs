@@ -41,5 +41,19 @@ namespace uspadtask
         public override string ToString() { return $"This is a Dog, Color = {Color}, Weight = {Weight}, TailLength = {TailLength}."; }
         public Dog(string color, float weight, float tailLength) : base(color, weight, tailLength) { }
     }
+    public class Cat : AnimalWithTail
+{
+    private string Purr()
+    {
+        return "purrrr";
+    }
+    private string Meow()
+    {
+        return "Meow";
+    }
+    public override string MakeSound() { return Purr() + Meow(); }
+    public override string ToString() { return $"This is a Dog, Color = {Color}, Weight = {Weight}, TailLength = {TailLength}."; }
+    public Cat(string color, float weight, float tailLength) : base(color, weight, tailLength) { }
+}
 }
 
